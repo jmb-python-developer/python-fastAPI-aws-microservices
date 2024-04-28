@@ -15,6 +15,7 @@ This will include the following files:
 - Test code -> Codebase that tests the application souce code.
 - Dockerfile -> For dockerizing the service, that is, containerizing it.
 - IaC files -> Infrastructure as code files, for provisining infra resources.
+- CLI.py file, uses Fire library to test the app using a CLI. To run execute `./CLI.py --help`
 
 ## Scaffold 
 
