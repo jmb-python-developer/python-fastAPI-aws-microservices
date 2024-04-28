@@ -1,6 +1,6 @@
-wikipedia
-pytest
-pytest-cov
-pylint
-black
-fire
+wikipedia==1.4.0
+pytest==8.1.2
+pytest-cov==5.0.0
+pylint==3.1.0
+black==24.4.2
+fire==0.6.0
