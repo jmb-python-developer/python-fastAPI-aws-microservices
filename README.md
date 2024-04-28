@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/jmb-python-developer/python-fastAPI-aws-microservices/actions/workflows/devops.yml/badge.svg)](https://github.com/jmb-python-developer/python-fastAPI-aws-microservices/actions/workflows/devops.yml)
+
 # Python FastAPI cloud based (AWS) Microservice
 
 Microservice using FastAPI and Deployment in AWS Project, this project showcases, more than complex business logic, devops practices for Python Microservices modern cloud development.
