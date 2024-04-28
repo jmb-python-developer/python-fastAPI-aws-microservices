@@ -8,6 +8,7 @@ format:
 	black *.py project_libs/*.py
 lint:
 	#check code syntax
+	pylint --disable=R,C *.py project_libs/*.py
 test:
 	#tests Step
 deploy:
