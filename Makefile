@@ -3,10 +3,11 @@ install:
 	#Install commands Step
 		pip install --upgrade pip &&\
 			pip install -r requirements.txt
-lint:
-	#check code syntax -flake8 or pylint- Step
 format:
 	#formatting Step
+	black *.py project_libs/*.py
+lint:
+	#check code syntax
 test:
 	#tests Step
 deploy:
