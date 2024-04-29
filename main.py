@@ -1,10 +1,11 @@
 
 # Third Party Libraries
 from fastapi import FastAPI
+
 import uvicorn
 
 # Project's Logic Code
-from project_libs.logic import wiki, search_wiki
+from project_libs.logic import wiki, search_wiki, phrases
 
 app = FastAPI()
 """
@@ -28,6 +29,12 @@ async def search(name: str):
     """Returns a wikipedia search with the name or keyword passed as criteria"""
     wiki_result = wiki(name)
     return {"Wiki Search Results": wiki_result}
+
+@app.get("/phrase/{name}")
+async def phrase(name: str):
+    """Returns a wikipedia page and return phrases on it"""
+    wiki_result_with_phrases = phrases(name)
+    return {"Wiki Search Results With Phrases": wiki_result_with_phrases}
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8080, host="0.0.0.0")
