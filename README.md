@@ -21,3 +21,8 @@ This will include the following files:
 
 1) Create Python Environment: `python3 -m venv ~/.venv` or `virtualenv ~/.venv`
 2) For phrases functionality to work, the following package has to be installed (locally, included in makefile): `python -m textblob.download_corpora`
+
+## Containerization
+
+1) Image can be built using docker: `docker build -t wiki-fastapi .`
+2) And run using docker command: `docker run `

@@ -23,3 +23,6 @@ jobs:
     - name: Format code
       run: |
         make format
+    - name: Build dcoker image
+      run: |
+        make build

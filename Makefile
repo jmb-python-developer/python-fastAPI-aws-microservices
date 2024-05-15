@@ -15,7 +15,10 @@ test:
 	python -m pytest -vv --cov=project_libs --cov=main test_*.py
 build:
 	# Build (container) step
-
+	docker build -t wiki-fastapi .
+run:
+	# Run docker image
+	docker run -p 127.0.0.1:8080:8080 259c363ece48
 deploy:
 	#deploy Step
 all: install lint format test deploy
