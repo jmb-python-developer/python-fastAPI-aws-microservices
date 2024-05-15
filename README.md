@@ -26,3 +26,7 @@ This will include the following files:
 
 1) Image can be built using docker: `docker build -t wiki-fastapi .`
 2) And run using docker command: `docker run `
+
+## AWS Integration
+- Makefile, deploy stage, contains the customisable commands to push the API image to AWS ECR.
+- buildspeck.yml file contains the 'make all' directive that can be used with AWS CodeBuild, to also push into AWS ECR for all environments.
