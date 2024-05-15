@@ -13,9 +13,10 @@ def search_wiki(name="Einstein"):
     """Search Wikipedia and provides a summary for the given search work passed."""
     return wikipedia.search(name)
 
+
 def phrases(name: str):
     """Returns phrases from wikipedia search"""
     page = wiki(name)
     blob = TextBlob(page)
-    phrases = blob.noun_phrases
-    return phrases
+    phrases_found = blob.noun_phrases
+    return phrases_found

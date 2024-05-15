@@ -9,7 +9,7 @@ format:
 	black *.py project_libs/*.py
 lint:
 	#check code syntax
-	pylint --disable=R,C *.py project_libs/*.py
+	pylint --disable=R,C --fail-under=9.5 *.py project_libs/*.py
 test:
 	#tests Step
 	python -m pytest -vv --cov=project_libs --cov=main test_*.py

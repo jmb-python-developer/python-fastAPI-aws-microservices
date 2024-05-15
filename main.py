@@ -1,4 +1,3 @@
-
 # Third Party Libraries
 from fastapi import FastAPI
 
@@ -15,26 +14,31 @@ Basic FastAPI application with two routes: the root route which responds with a 
 
 @app.get("/")
 async def root():
-    return {"message": "This is a Wikipedia API. Call paths /search or /wiki to use the functionality provided. Use /docs for API developers documentation"}
+    return {
+        "message": "This is a Wikipedia API. Call paths /search or /wiki to use the functionality provided. Use /docs for API developers documentation"
+    }
 
 
 @app.get("/search/{value}")
 async def search(value: str):
     """Produces a search of keywords in wikipedia based on input value"""
     search_results = search_wiki(value)
-    return {"Wikipedia Search Keywords" : search_results}
+    return {"Wikipedia Search Keywords": search_results}
+
 
 @app.get("/wiki/{name}")
-async def search(name: str):
+async def search_by_name(name: str):
     """Returns a wikipedia search with the name or keyword passed as criteria"""
     wiki_result = wiki(name)
     return {"Wiki Search Results": wiki_result}
+
 
 @app.get("/phrase/{name}")
 async def phrase(name: str):
     """Returns a wikipedia page and return phrases on it"""
     wiki_result_with_phrases = phrases(name)
     return {"Wiki Search Results With Phrases": wiki_result_with_phrases}
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8080, host="0.0.0.0")
